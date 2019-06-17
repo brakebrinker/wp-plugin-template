@@ -8,8 +8,8 @@
  *
  * @link       https://www.itransition.com
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  */
 
 /**
@@ -21,17 +21,17 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
 namespace IlexComments\Includes;
 
-use IlexComments\Admin\IlexCommentsAdmin;
-use IlexComments\Publ\IlexCommentsPublic;
+use IlexComments\Admin\TemplatePluginAdmin;
+use IlexComments\Publ\TemplatePluginPublic;
 
-class IlexComments
+class TemplatePlugin
 {
 
     /**
@@ -39,7 +39,7 @@ class IlexComments
      * the plugin.
      *
      * @access protected
-     * @var IlexCommentsLoader $loader Maintains and registers all hooks for the plugin.
+     * @var TemplatePluginLoader $loader Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -88,26 +88,26 @@ class IlexComments
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(__DIR__) . 'includes/IlexCommentsLoader.php';
+        require_once plugin_dir_path(__DIR__) . 'includes/TemplatePluginLoader.phphp';
 
         /**
          * The class responsible for defining internationalization functionality
          * of the plugin.
          */
-        require_once plugin_dir_path(__DIR__) . 'includes/IlexCommentsI18n.php';
+        require_once plugin_dir_path(__DIR__) . 'includes/TemplatePluginI18n.phphp';
 
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(__DIR__) . 'admin/IlexCommentsAdmin.php';
+        require_once plugin_dir_path(__DIR__) . 'admin/TemplatePluginAdmin.phphp';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path(__DIR__) . 'public/IlexCommentsPublic.php';
+        require_once plugin_dir_path(__DIR__) . 'public/TemplatePluginPublicic.php';
 
-        $this->loader = new IlexCommentsLoader();
+        $this->loader = new TemplatePluginLoader();
     }
 
     /**
@@ -117,7 +117,7 @@ class IlexComments
      */
     private function setLocale()
     {
-        $pluginI18n = new IlexCommentsI18n();
+        $pluginI18n = new TemplatePluginI18N();
 
         $this->loader->addAction('plugins_loaded', $pluginI18n, 'load_plugin_textdomain');
     }
@@ -130,7 +130,7 @@ class IlexComments
      */
     private function defineAdminHooks()
     {
-        $pluginAdmin = new IlexCommentsAdmin($this->getPluginName(), $this->getVersion());
+        $pluginAdmin = new TemplatePluginAdmin($this->getPluginName(), $this->getVersion());
 
         $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueStyles');
         $this->loader->addAction('admin_enqueue_scripts', $pluginAdmin, 'enqueueScripts');
@@ -144,7 +144,7 @@ class IlexComments
      */
     private function definePublicHooks()
     {
-        $pluginPublic = new IlexCommentsPublic($this->getPluginName(), $this->getVersion());
+        $pluginPublic = new TemplatePluginPublic($this->getPluginName(), $this->getVersion());
 
         $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueStyles');
         $this->loader->addAction('wp_enqueue_scripts', $pluginPublic, 'enqueueScripts');
@@ -172,7 +172,7 @@ class IlexComments
     /**
      * The reference to the class that orchestrates the hooks with the plugin.
      *
-     * @return IlexCommentsLoader Orchestrates the hooks of the plugin.
+     * @return TemplatePluginLoader Orchestrates the hooks of the plugin.
      */
     public function getLoader()
     {

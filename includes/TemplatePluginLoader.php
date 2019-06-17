@@ -6,8 +6,8 @@
  * @link       https://www.itransition.com
  * @since      1.0.0
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  */
 
 /**
@@ -17,14 +17,14 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
 namespace IlexComments\Includes;
 
-class IlexCommentsLoader
+class TemplatePluginLoader
 {
 
     /**

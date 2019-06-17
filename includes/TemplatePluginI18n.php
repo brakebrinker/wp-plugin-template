@@ -9,8 +9,8 @@
  * @link       https://www.itransition.com
  * @since      1.0.0
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  */
 
 /**
@@ -20,14 +20,14 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
 namespace IlexComments\Includes;
 
-class IlexCommentsI18n
+class TemplatePluginI18N
 {
     /**
      * Load the plugin text domain for translation.

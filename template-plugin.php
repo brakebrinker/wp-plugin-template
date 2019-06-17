@@ -3,16 +3,15 @@
 /**
  * @link              https://www.itransition.com
  * @since             1.0.0
- * @package           Ilex_Comments
+ * @package           Template_Plugin
  *
  * @wordpress-plugin
- * Plugin Name:       Ilex comments
- * Plugin URI:        https://ilex.by
- * Description:       Comments plugin. Integrate ILEX Comments service.
+ * Plugin Name:       Template plugin
+ * Description:       WP template plugin.
  * Version:           1.0.0
  * Author:            Maksim Pevnev
  * Author URI:        https://www.itransition.com
- * Text Domain:       ilex-comments
+ * Text Domain:       template_plugin
  * Domain Path:       /languages
  */
 
@@ -30,20 +29,20 @@ define('PLUGIN_NAME_VERSION', '1.0.0');
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/IlexCommentsActivator.php
+ * This action is documented in includes/TemplatePluginActivatoror.php
  */
 function activate_ilex_comments() {
-    require_once plugin_dir_path(__FILE__) . 'includes/IlexCommentsActivator.php';
-    \IlexComments\Includes\IlexCommentsActivator::activate();
+    require_once plugin_dir_path(__FILE__) . 'includes/TemplatePluginActivator.phphp';
+    \IlexComments\Includes\TemplatePluginActivator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/IlexCommentsDeactivator.php
+ * This action is documented in includes/TemplatePluginDeactivator.phphp
  */
 function deactivate_ilex_comments() {
-    require_once plugin_dir_path(__FILE__) . 'includes/IlexCommentsDeactivator.php';
-    \IlexComments\Includes\IlexCommentsDeactivator::deactivate();
+    require_once plugin_dir_path(__FILE__) . 'includes/TemplatePluginDeactivator.phphp';
+    \IlexComments\Includes\TemplatePluginDeactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_ilex_comments');
@@ -53,7 +52,7 @@ register_deactivation_hook(__FILE__, 'deactivate_ilex_comments');
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path(__FILE__) . 'includes/IlexComments.php';
+require plugin_dir_path(__FILE__) . 'includes/TemplatePlugin.phphp';
 
 /**
  * Begins execution of the plugin.
@@ -62,8 +61,8 @@ require plugin_dir_path(__FILE__) . 'includes/IlexComments.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  */
-function run_ilex_comments() {
-    $plugin = new \IlexComments\Includes\IlexComments();
+function run_template_plugin() {
+    $plugin = new \IlexComments\Includes\TemplatePlugin();
     $plugin->run();
 }
-run_ilex_comments();
+run_template_plugin();

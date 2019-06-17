@@ -5,8 +5,8 @@
  *
  * @link       https://www.itransition.com
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  */
 
 /**
@@ -14,14 +14,14 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  *
- * @package    IlexComments
- * @subpackage IlexComments/includes
+ * @package    TemplatePlugin
+ * @subpackage TemplatePlugin/includes
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
 namespace IlexComments\Includes;
 
-class IlexCommentsActivator
+class TemplatePluginActivator
 {
     /**
      * Short Description. (use period)
