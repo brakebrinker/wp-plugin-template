@@ -26,10 +26,10 @@
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
-namespace IlexComments\Includes;
+namespace TemplatePlugin\Includes;
 
-use IlexComments\Admin\TemplatePluginAdmin;
-use IlexComments\Publ\TemplatePluginPublic;
+use TemplatePlugin\Admin\TemplatePluginAdmin;
+use TemplatePlugin\Publ\TemplatePluginPublic;
 
 class TemplatePlugin
 {
@@ -69,7 +69,7 @@ class TemplatePlugin
         } else {
             $this->version = '1.0.0';
         }
-        $this->pluginName = 'ilex-comments';
+        $this->pluginName = 'template-plugin';
 
         $this->loadDependencies();
         $this->setLocale();

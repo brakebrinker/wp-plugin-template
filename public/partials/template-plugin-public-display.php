@@ -8,8 +8,8 @@
  * @link       https://www.itransition.com
  * @since      1.0.0
  *
- * @package    Ilex_Comments
- * @subpackage Ilex_Comments/public/partials
+ * @package    Template_Plugin
+ * @subpackage Template_Plugin/public/partials
  */
 ?>
 

@@ -21,7 +21,7 @@
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
-namespace IlexComments\Includes;
+namespace TemplatePlugin\Includes;
 
 class TemplatePluginDeactivator
 {

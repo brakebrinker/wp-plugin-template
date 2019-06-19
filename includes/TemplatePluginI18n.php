@@ -25,7 +25,7 @@
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
-namespace IlexComments\Includes;
+namespace TemplatePlugin\Includes;
 
 class TemplatePluginI18N
 {
@@ -35,7 +35,7 @@ class TemplatePluginI18N
     public function load_plugin_textdomain()
     {
         load_plugin_textdomain(
-            'ilex-comments',
+            'template-plugin',
             false,
             dirname(dirname(plugin_basename(__FILE__))) . '/languages/'
         );

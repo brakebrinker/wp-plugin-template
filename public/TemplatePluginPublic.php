@@ -20,7 +20,7 @@
  * @author     Maksim Pevnev <m.pevnev@itransition.com>
  */
 
-namespace IlexComments\Publ;
+namespace TemplatePlugin\Publ;
 
 class TemplatePluginPublic
 {
